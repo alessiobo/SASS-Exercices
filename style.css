@@ -1,0 +1,55 @@
+div {
+  display: flex;
+  border: 2px solid red;
+  padding: 20px;
+  gap: 20px;
+  flex-direction: column;
+}
+div h1 {
+  color: green;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: blue;
+  text-decoration-thickness: 1.5px;
+}
+
+section:first-of-type {
+  display: flex;
+}
+
+article {
+  padding: 20px;
+  border: 2px solid;
+}
+
+p {
+  text-align: center;
+}
+
+.table > article {
+  color: green;
+  border-color: green;
+  font-size: 1rem;
+  border: 2px solid;
+  padding: 20px;
+}
+.table > article p.color1 {
+  color: blue;
+  border-color: green;
+  font-size: 1rem;
+}
+.table > article p.color2 {
+  color: red;
+  border-color: green;
+  font-size: 1rem;
+}
+
+.footer > article {
+  color: green;
+  border-color: blue;
+  font-size: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

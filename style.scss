@@ -1,0 +1,59 @@
+$color-primary: red;
+$color-secondary: blue;
+$color-tertiary: green;
+
+div {
+    display: flex;
+    border: 2px solid $color-primary;
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+
+    h1 {
+        color: $color-tertiary;
+        display: flex;
+        justify-content: center;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-color: $color-secondary;
+        text-decoration-thickness: 1.5px;
+    }
+}
+
+section:first-of-type {
+    display: flex;
+}
+
+article {
+    padding: 20px;
+    border: 2px solid;
+}
+
+p {
+    text-align: center;
+}
+
+@mixin article-prop($color: $color-tertiary, $border-color: $color-tertiary, $font-size: 1rem) {
+    color: $color;
+    border-color: $border-color;
+    font-size: $font-size;
+}
+
+.table>article {
+    @include article-prop();
+    border: 2px solid;
+    padding: 20px;
+
+    p.color1 {
+        @include article-prop($color-secondary);
+    }
+
+    p.color2 {
+        @include article-prop($color-primary);
+    }
+
+}
+
+.footer>article {
+    @include article-prop ($color-tertiary, $color-secondary, 25px)
+}
